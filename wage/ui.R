@@ -6,7 +6,7 @@ shinyUI(navbarPage(
                  fluidRow(column(
                          12,
                          p(
-                                 "It is a simulation of how much wage can a person get with Wage dataset in ISLR package."
+                                 "It is a simulation of what variables influence to people's wages with Wage dataset in ISLR package."
                          ),
                          p(
                                  "The Wage dataset is about wage and other data for a group of 3000 workers in the Mid-Atlantic region."
@@ -59,7 +59,11 @@ Workers raw wage
                 "Simulation",
                 fluidRow(column(
                         12,
-                        p("Adjust variables and find out how much the expected wage will be.")
+                        p("You can adjust each variable's value and find out how variables influence the wage with the following steps:"),
+                        p("1. Set all variable's values as you like."),
+                        p("2. Check the 'Expected Wage' number."),
+                        p("3. Adjust one or more variables and watch how the number changes."),
+                        hr()
                 )),
                 fluidRow(
                         column(
@@ -140,7 +144,11 @@ Workers raw wage
                 "Distributions",
                 fluidRow(column(
                         12,
-                        p("Select a variable and find out the distribution over wage spectrum with the density plot for it.")
+                        p("Sometimes seeing distributions of data can help people to get true insights."),
+                        p("You can divide the whole data into many data by particular variable's values with the following steps:"),
+                        p("1. Select a varaible to divide the whole data by."),
+                        p("2. Watch each distribution of divided data."),
+                        hr()
                 )),
                 selectInput(
                         "densityKind", label = h5("Variable"),
@@ -158,7 +166,7 @@ Workers raw wage
                 "Summary",
                 fluidRow(column(
                         12,
-                        p("Which variables are more influential on the model is like these:"),
+                        p("The list of most influential variables on wage is like these:"),
                         plotOutput("varImp"),
                         verbatimTextOutput("varImp2"),
                         hr(),
